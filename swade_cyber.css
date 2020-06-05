@@ -1,0 +1,156 @@
+.swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header {
+  background: #57aad3;
+  border: 1px solid transparent;
+  color : #1B4965;
+}
+.swade.sheet .window-content {
+  background: #faf9ed;
+  background-image: url("./ui/PBR_2.png");
+}
+.swade.sheet .tabs {
+    border-color: #1B4965;
+}
+.swade.sheet .tabs .item {
+  background: #1B4965;
+    color : #57aad3;
+    border: 1px solid transparent;
+	background:
+		linear-gradient(135deg, transparent 9px, #1B4965 0) top left,
+		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
+		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
+		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
+	background-size: 51% 51%;
+	background-repeat: no-repeat;
+}
+.swade.sheet .tabs .item:hover, .swade.sheet .tabs .item:focus {
+  background: #1B4965;
+    color : #73bcdb;
+    border: 1px solid transparent;
+	background:
+		linear-gradient(135deg, transparent 9px, #1B4965 0) top left,
+		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
+		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
+		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
+	background-size: 51% 51%;
+	background-repeat: no-repeat;
+    font-weight: bold;
+}
+.swade.sheet .tabs .item.active {
+  background: #1B4965;
+    color : #f88337;
+    background-image: url("./ui/PBR_2.png");
+    border: 1px solid transparent;
+	background:
+		linear-gradient(135deg, transparent 9px, #1B4965 0) top left,
+		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
+		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
+		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
+	background-size: 51% 51%;
+	background-repeat: no-repeat;
+    font-weight: bold;
+}
+.swade.sheet input[type=text]{
+    background: rgba(0, 0, 0, 0.1);
+}
+.swade.sheet input[type=checkbox] + label::before {
+  border-color: #73bcdb;
+}
+.swade.sheet input[type=checkbox]:checked + label::after {
+  color: #1B4965;
+}
+.swade.sheet input[type=checkbox]:checked + label:hover::after {
+  color: #73bcdb;
+}
+.swade.sheet.actor .sheet-body .editor {
+  border: 1px groove #FFFFFF;
+}
+
+.swade.sheet.actor .sheet-body .header-field {
+    
+    color : #1B4965;
+    border: 1px solid transparent;
+    background: #73bcdb; /* fallback */
+	background:
+		linear-gradient(135deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) top left,
+		linear-gradient(225deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top right,
+		linear-gradient(315deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) bottom right,
+		linear-gradient(45deg,  transparent 0px, rgba(208, 204, 208, 0.8) 0) bottom left;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+
+}
+
+.swade.sheet.actor .sheet-body .tab[data-tab="powers"] .header-field {
+    border: 1px solid transparent;
+    background: #73bcdb; /* fallback */
+	background:
+		linear-gradient(135deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top left,
+		linear-gradient(225deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top right,
+		linear-gradient(315deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) bottom right,
+		linear-gradient(45deg,  transparent 0px, rgba(208, 204, 208, 0.8) 0) bottom left;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.swade.sheet.actor .sheet-body .attributes .attributes-list .attribute input {
+    background: rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header {
+  background: rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-content {
+  border-top: 1px solid #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .chips .chip .chip-content {
+  background-color: #57aad3;
+}
+.swade.sheet.actor .sheet-body .powers input[type=text]{
+    background: rgba(255, 255, 255, 0.25);
+    color: #1B4965;
+    font-weight: bold;
+}
+
+.swade.sheet.actor.character .inventory .inventory-categories .item-titles {
+    background: rgba(208, 204, 208, 0.65);
+    color: #1B4965;
+}
+
+.swade.sheet.actor .sheet-body .powers input[type=text]::placeholder{
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: normal;
+}
+
+.swade.sheet.actor .sheet-body .powers .powers-list .power {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header {
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-current {
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-max {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.swade.sheet.item .sheet-body .header-field {
+    color : #1B4965;
+    border: 1px solid transparent;
+    background: #73bcdb; /* fallback */
+	background:
+		linear-gradient(135deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) top left,
+		linear-gradient(225deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top right,
+		linear-gradient(315deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) bottom right,
+		linear-gradient(45deg,  transparent 0px, rgba(208, 204, 208, 0.8) 0) bottom left;
+	background-size: 51% 51%;
+	background-repeat: no-repeat;
+}
