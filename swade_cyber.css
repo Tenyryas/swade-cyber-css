@@ -133,6 +133,16 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }
+.swade.sheet.actor .powers .arcane-tabs .arcane {
+  background: #1B4965;
+  color: #57aad3;
+}
+
+.swade.sheet.actor .powers .arcane-tabs .arcane.active {
+  background: #1B4965;
+  color: #f88337;
+  font-weight: bold;
+}
 
 .swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-current {
   background: rgba(0, 0, 0, 0.1);
