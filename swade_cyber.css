@@ -31,7 +31,7 @@
 		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
 		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
 		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
-	background-size: 50% 50%;
+	background-size: 51% 51%;
 	background-repeat: no-repeat;
 }
 .swade.sheet .tabs .item.active {
@@ -44,23 +44,25 @@
 		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
 		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
 		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
-	background-size: 50% 50%;
+	background-size: 51% 51%;
 	background-repeat: no-repeat;
 }
 .swade.sheet input[type=text]{
     background: rgba(0, 0, 0, 0.1);
 }
-.swade.sheet input[type=checkbox] + label::before {
-  border-color: #73bcdb;
+.swade.sheet .checkmark {
+  background-color: rgba(208, 204, 208, 0.8);
 }
-.swade.sheet input[type=checkbox]:checked + label::after {
-  color: #1B4965;
+.swade.sheet .check-container:hover input ~ .checkmark {
+  background-color: #1B4965;
 }
-.swade.sheet input[type=checkbox]:checked + label:hover::after {
-  color: #73bcdb;
+.swade.sheet .check-container input:checked ~ .checkmark {
+  background-color: #1B4965;
 }
-.swade.sheet.actor .sheet-body .editor {
-  border: 1px groove #FFFFFF;
+.swade.sheet .check-container .checkmark:after {
+  border: solid #f88337;
+  border-width: 0 3px 3px 0;
+
 }
 
 .swade.sheet.actor .sheet-body .header-field {
