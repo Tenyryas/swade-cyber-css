@@ -164,3 +164,10 @@
 	background-size: 51% 51%;
 	background-repeat: no-repeat;
 }
+
+.swade.sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: rgba(208, 204, 208, 0.8);
+    border: 1px solid #1B4965;
+}
