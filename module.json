@@ -2,16 +2,44 @@
   "name": "swade-cyber-css",
   "title": "SWADE Cyberpunk Theme",
   "description": "<p>A character sheet theme for SWADE</p>",
-  "version": "1.2.0",
   "author": "Kyane",
-  "systems": ["swade"],
-  "scripts": [],
-  "esmodules": [],
-  "styles": ["swade_cyber.css"],
-  "packs": [],
+  "authors": [],
   "url": "https://github.com/Tenyryas/swade-cyber-css",
+  "flags": {},
+  "version": "1.2.1",
+  "minimumCoreVersion": "0.6.6",
+  "compatibleCoreVersion": "0.8.9",
+  "scripts": ["./scripts/init.js"],
+  "esmodules": [],
+  "styles": [
+    "swade_cyber.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "packs": [],
+  "system": [
+    "swade"
+  ],
+  "dependencies": [],
+  "socket": false,
   "manifest": "https://raw.githubusercontent.com/Tenyryas/swade-cyber-css/master/module.json",
   "download": "https://github.com/Tenyryas/swade-cyber-css/raw/v1.2.0/swade-cyber-css.zip",
-  "compatibleCoreVersion" : "0.8.9",
-  "minimumCoreVersion": "0.6.6"
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
 }

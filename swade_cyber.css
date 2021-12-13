@@ -12,6 +12,7 @@
   --lightblue: #0dabe8;
   --darkgrey: #0a1629;
   --white: #e8e8e8;
+  --animation: bg-scrolling-reverse 5s linear infinite;
 
 }
 
@@ -24,7 +25,7 @@
 .swade.sheet .window-content {
   background-image: var(--bg-img);
   background-color: var(--white);
-  animation: bg-scrolling-reverse 5s linear infinite;
+  animation: var(--animation);
 }
 .swade.sheet .tabs {
   border-color: var(--lightblue) !important;
@@ -213,17 +214,17 @@
 #chat-log .chat-message {
   background: var(--white);
   background-image: var(--bg-img);
-  animation: bg-scrolling-reverse 5s linear infinite;
+  animation: var(--animation);
 }
 textarea#chat-message {
   background: var(--white);
   background-image: var(--bg-img);
-  animation: bg-scrolling-reverse 5s linear infinite;
+  animation: var(--animation);
 }
 #chat-log .chat-message.whisper {
   background: var(--white);
   background-image: var(--bg-img);
-  animation: bg-scrolling-reverse 5s linear infinite;
+  animation: var(--animation);
   border: 3px solid #ffd453;
 }
 .swade.chat-card .card-header {
@@ -283,7 +284,7 @@ textarea#chat-message {
 .swade-official .window-content {
   background-image: var(--bg-img);
   background-color: var(--white);
-  animation: bg-scrolling-reverse 5s linear infinite;
+  animation: var(--animation);
 }
 
 .swade-official .wounds {
