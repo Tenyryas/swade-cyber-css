@@ -38,7 +38,7 @@
   "dependencies": [],
   "socket": false,
   "manifest": "https://raw.githubusercontent.com/Tenyryas/swade-cyber-css/master/module.json",
-  "download": "https://github.com/Tenyryas/swade-cyber-css/raw/v1.2.0/swade-cyber-css.zip",
+  "download": "https://github.com/Tenyryas/swade-cyber-css/raw/v1.2.1/swade-cyber-css.zip",
   "protected": false,
   "coreTranslation": false,
   "library": false
