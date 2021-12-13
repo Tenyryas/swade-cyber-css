@@ -1,173 +1,425 @@
-.swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header {
-  background: #57aad3;
+:root {
+
+  --bg-img: url("./ui/PBR_2.png");
+  --skills-header: url(./ui/skills_header.webp);
+  --skills-body: url(./ui/skills_bg.webp);
+  --skills-footer: url(./ui/skills_footer.webp);
+  --gradient:
+  linear-gradient(135deg, transparent 9px, var(--darkgrey) 0) top left,
+  linear-gradient(225deg, transparent 0px, var(--darkgrey) 0) top right,
+  linear-gradient(315deg, transparent 9px, var(--darkgrey) 0) bottom right,
+  linear-gradient(45deg,  transparent 0px, var(--darkgrey) 0) bottom left;
+  --lightblue: #0dabe8;
+  --darkgrey: #0a1629;
+  --white: #e8e8e8;
+
+}
+
+.swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header, .swade.sheet.actor .sheet-body .header-field {
+  background: var(--gradient);
   border: 1px solid transparent;
-  color : #1B4965;
+  border-radius: 0px;
+  color : var(--lightblue);
 }
 .swade.sheet .window-content {
-  background: #faf9ed;
-  background-image: url("./ui/PBR_2.png");
+  background-image: var(--bg-img);
+  background-color: var(--white);
+  animation: bg-scrolling-reverse 5s linear infinite;
 }
 .swade.sheet .tabs {
-    border-color: #1B4965;
+  border-color: var(--lightblue) !important;
 }
 .swade.sheet .tabs .item {
-  background: #1B4965;
-    color : #57aad3;
-    border: 1px solid transparent;
-	background:  
-		linear-gradient(135deg, transparent 9px, #1B4965 0) top left,
-		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
-		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
-		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left !important;
-	background-size: 51% 51%;
-	background-repeat: no-repeat;
+  background: var(--gradient) !important;
+  color : var(--lightblue);
+  border-color: var(--lightblue) !important;
 }
 .swade.sheet .tabs .item:hover, .swade.sheet .tabs .item:focus {
-  background: #1B4965;
-    color : #73bcdb;
-    border: 1px solid transparent;
-	background: #1B4965
-		linear-gradient(135deg, transparent 9px, #1B4965 0) top left,
-		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
-		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
-		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
-	background-size: 51% 51%;
-	background-repeat: no-repeat;
+  background: var(--lightblue) !important;
+  color: var(--darkgrey);
+  border-color: var(--lightblue) !important;
 }
 .swade.sheet .tabs .item.active {
-  background: #1B4965;
-    color : #f88337;
-    background-image: url("./ui/PBR_2.png");
-    border: 1px solid transparent;
-	background: #1B4965
-		linear-gradient(135deg, transparent 9px, #1B4965 0) top left,
-		linear-gradient(225deg, transparent 0px, #1B4965 0) top right,
-		linear-gradient(315deg, transparent 0px, #1B4965 0) bottom right,
-		linear-gradient(45deg,  transparent 0px, #1B4965 0) bottom left;
-	background-size: 51% 51%;
-	background-repeat: no-repeat;
+  background: var(--lightblue) !important;
+  color: var(--darkgrey);
+  border-color: var(--lightblue) !important;
 }
 .swade.sheet input[type=text]{
-    background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
-.swade.sheet .checkmark {
-  background-color: rgba(208, 204, 208, 0.8);
+.swade.sheet .checkmark, 
+.swade-official .checkmark {
+  background-color: var(--darkgrey);
 }
-.swade.sheet .check-container:hover input ~ .checkmark {
-  background-color: #1B4965;
+.swade.sheet .check-container:hover input ~ .checkmark, 
+.swade-official .check-container:hover input ~ .checkmark {
+  background-color: var(--lightblue);
+  border: 1px solid var(--white);
 }
-.swade.sheet .check-container input:checked ~ .checkmark {
-  background-color: #1B4965;
-}
-.swade.sheet .check-container .checkmark:after {
-  border: solid #f88337;
+.swade.sheet .check-container:hover input ~ .checkmark:after,
+.swade-official .check-container:hover input ~ .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
   border-width: 0 3px 3px 0;
-
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.swade.sheet .check-container input:checked ~ .checkmark, 
+.swade-official .check-container input:checked ~ .checkmark {
+  background-color: var(--darkgrey);
+}
+.swade.sheet .check-container:hover input:checked ~ .checkmark, 
+.swade-official .check-container:hover input:checked ~ .checkmark {
+  background-color: var(--darkgrey);
+}
+.swade.sheet .check-container .checkmark:after, 
+.swade-official .check-container .checkmark:after {
+  border: solid var(--lightblue);
+  border-width: 0 3px 3px 0;
 }
 
-.swade.sheet.actor .sheet-body .header-field {
-    
-    color : #1B4965;
-    border: 1px solid transparent;
-    background: #73bcdb; /* fallback */
-	background:
-		linear-gradient(135deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) top left,
-		linear-gradient(225deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top right,
-		linear-gradient(315deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) bottom right,
-		linear-gradient(45deg,  transparent 0px, rgba(208, 204, 208, 0.8) 0) bottom left;
-	background-size: 50% 50%;
-	background-repeat: no-repeat;
-
+.swade .check-container input:focus + .checkmark,
+.swade-official .check-container input:focus + .checkmark {
+  outline: none;
+  box-shadow: 0 0 5px var(--lightblue);
+}
+.swade .check-container:hover input ~ .checkmark,
+.swade-official .check-container:hover input ~ .checkmark {
+  box-shadow: 0 0 5px var(--lightblue);
+}
+.swade .check-container:focus input ~ .checkmark,
+.swade-official .check-container:focus input ~ .checkmark {
+  box-shadow: 0 0 5px var(--lightblue);
 }
 
-.swade.sheet.actor .sheet-body .tab[data-tab="powers"] .header-field {
-    border: 1px solid transparent;
-    background: #73bcdb; /* fallback */
-	background:
-		linear-gradient(135deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top left,
-		linear-gradient(225deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top right,
-		linear-gradient(315deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) bottom right,
-		linear-gradient(45deg,  transparent 0px, rgba(208, 204, 208, 0.8) 0) bottom left;
-	background-size: 50% 50%;
-	background-repeat: no-repeat;
-}
 
+.swade.sheet.item .sheet-body .editor{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .editor{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .header-field .fa-plus:hover {
+  filter: drop-shadow(0 0 5px #FFFFFF);
+}
+.swade.sheet.actor .sheet-body .biography .header-field {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .swade.sheet.actor .sheet-body .attributes .attributes-list .attribute input {
-    background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 .swade.sheet.actor .sheet-body .gear .gear-list .gear-card {
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
 }
 .swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header {
   background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header .item-image{
+  border-radius: 6px;
 }
 .swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-content {
-  border-top: 1px solid #FFFFFF;
-  background: rgba(255, 255, 255, 0.05);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
   border-color: rgba(0, 0, 0, 0.1);
-}
-.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .chips .chip .chip-content {
-  background-color: #57aad3;
+  border-radius: 6px;
 }
 .swade.sheet.actor .sheet-body .powers input[type=text]{
-    background: rgba(255, 255, 255, 0.25);
-    color: #1B4965;
-    font-weight: bold;
-}
-
-.swade.sheet.actor.character .inventory .inventory-categories .item-titles {
-    background: rgba(208, 204, 208, 0.65);
-    color: #1B4965;
-}
-
-.swade.sheet.actor .sheet-body .powers input[type=text]::placeholder{
-    color: rgba(255, 255, 255, 0.75);
-    font-weight: normal;
-}
-
-.swade.sheet.actor .sheet-body .powers .powers-list .power {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header {
   background: rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: white;
   font-weight: bold;
+  border-color: var(--darkgrey);
 }
 .swade.sheet.actor .powers .arcane-tabs .arcane {
-  background: #1B4965;
-  color: #57aad3;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 }
-
+.swade.sheet.actor .powers .arcane-tabs .arcane:hover, .swade.sheet.actor .powers .arcane-tabs .arcane:focus {
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 .swade.sheet.actor .powers .arcane-tabs .arcane.active {
-  background: #1B4965;
-  color: #f88337;
+  background: var(--darkgrey);
+  border: 1px solid var(--white);
+}
+.swade.sheet.actor .sheet-body .powers input[type=text]::placeholder{
+  color: rgba(255, 255, 255, 0.75);
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power .item-image {
+  border-top-left-radius: 10px;
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header {
+  background: var(--lightblue);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header .fas:hover {
+  filter: drop-shadow(0 0 5px #FFFFFF);
+  text-shadow: none;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .item-unequipped{
+  text-shadow: none;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls {
+  color: white;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fas {
+  font-weight: normal;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fa-star {
   font-weight: bold;
 }
-
 .swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-current {
   background: rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid rgba(179, 175, 155, 1);
 }
 .swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-max {
   background: rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
-
-.swade.sheet.item .sheet-body .header-field {
-    color : #1B4965;
-    border: 1px solid transparent;
-    background: #73bcdb; /* fallback */
-	background:
-		linear-gradient(135deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) top left,
-		linear-gradient(225deg, transparent 0px, rgba(208, 204, 208, 0.8) 0) top right,
-		linear-gradient(315deg, transparent 9px, rgba(208, 204, 208, 0.8) 0) bottom right,
-		linear-gradient(45deg,  transparent 0px, rgba(208, 204, 208, 0.8) 0) bottom left;
-	background-size: 51% 51%;
-	background-repeat: no-repeat;
+.swade.sheet.actor .inventory .inventory-categories .item-titles {
+  background: var(--lightblue);
+  border-radius: 0px;
 }
-
+.swade.sheet.actor .inventory .inventory-categories .item-image{
+  border-radius: 5px;
+}
 .swade.sheet ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: rgba(208, 204, 208, 0.8);
-    border: 1px solid #1B4965;
+  outline: none;
+  border-radius: 3px;
+  background: #81a8bd;
+  border: 1px solid var(--lightblue);
+}
+#chat-log .chat-message {
+  background: var(--white);
+  background-image: var(--bg-img);
+  animation: bg-scrolling-reverse 5s linear infinite;
+}
+textarea#chat-message {
+  background: var(--white);
+  background-image: var(--bg-img);
+  animation: bg-scrolling-reverse 5s linear infinite;
+}
+#chat-log .chat-message.whisper {
+  background: var(--white);
+  background-image: var(--bg-img);
+  animation: bg-scrolling-reverse 5s linear infinite;
+  border: 3px solid #ffd453;
+}
+.swade.chat-card .card-header {
+  background: var(--darkgrey);
+  margin-left: -5px;
+  border-top: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: none;
+  box-shadow: 0px 15px 10px -15px rgba(0,0,0,1);
+}
+.swade.chat-card .card-header:hover {
+  background: var(--darkgrey);
+  text-shadow: 0 0 7px var(--lightblue);
+}
+
+.swade.chat-card .card-header h3 {
+  flex: 1;
+  margin: 0;
+  line-height: 40px;
+  color: #111;
+  overflow: hidden;
+  height: 36px;
+  word-break: break-all;
+}
+
+.swade.chat-card .card-header img {
+  background-color: var(--white);
+  flex: 0 0 36px;
+  margin-left: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,1);
+}
+.swade.chat-card .card-header a {
+  color: var(--lightblue);
+  vertical-align: text-bottom;
+}
+.swade.chat-card .card-header a:hover {
+  text-shadow: 0 0 7px var(--lightblue);
+}
+
+.swade.chat-card button:hover,
+.swade.chat-card button:focus {
+  box-shadow: 0 0 5px var(--lightblue);
+}
+
+
+
+/* 
+
+  SWADE OFFICIAL 
+
+*/
+
+.swade-official .window-content {
+  background-image: var(--bg-img);
+  background-color: var(--white);
+  animation: bg-scrolling-reverse 5s linear infinite;
+}
+
+.swade-official .wounds {
+  background-image: url(./ui/circle_wounds.webp);
+}
+
+.swade-official .fatigue {
+  background-image: url(./ui/circle_fatigue.webp);
+}
+
+@keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+.swade-official a:hover {
+  text-shadow: 0 0 8px var(--lightblue);
+}
+
+.swade-official .header {
+  background: var(--gradient);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+.swade-official .tabs .active {
+  color: var(--lightblue);
+  text-shadow: 0 0 8px var(--white);
+}
+
+.swade-official .section-header {
+  color: var(--lightblue);
+  border-radius: 0px;
+  text-shadow: 0 0 8px var(--white);
+}
+
+.swade-official .note-box .section-header {
+  color: var(--lightblue);
+  background: none;
+  text-shadow: 0 0 8px var(--lightblue);
+}
+
+.swade-official .armor-display {
+  background-image: url(./ui/sheet_armor.svg);
+  color: var(--lightblue);
+  padding-bottom: 4px;
+}
+
+.swade-official #conviction input, 
+.swade-official .derived input, 
+.swade-official .additional-stats input, 
+.swade-official .currency input {
+  background: var(--gradient);
+  color: var(--lightblue);
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  border-radius: 0px;
+}
+
+.swade-official .section-header .controls,
+.swade-official .item-create,
+section.inventory header > span {
+  color: var(--lightblue);
+}
+
+.swade-official .item-create:hover, 
+.swade-official .item-create :focus {
+  color: var(--lightblue);
+}
+
+section.inventory span.header-name {
+  padding-left: 12px;
+}
+
+.swade-official .description .char-img-container {
+  background-image: url(./ui/char-bg.webp);
+}
+
+.swade-official .description .char-img-container img {
+  max-width: 180px;
+  max-height: 180px;
+}
+
+.swade-official .skills li {
+  border-bottom: 2px solid var(--lightblue);
+}
+
+.swade-official .gear-card {
+  border-bottom: 2px solid var(--lightblue);
+}
+
+.swade-official .note-box {
+  grid-template-rows: minmax(3.2em, auto) 1fr 12em;
+}
+
+.swade-official .note-box button {
+  color: var(--lightblue);
+}
+
+.swade-official .note-box .note-header {
+  background-image: var(--skills-header);
+}
+
+.swade-official .note-box .note-main {
+  background-image: var(--skills-body);
+}
+
+.swade-official .note-box .note-footer {
+  background-image: var(--skills-footer);
+  height: 48px;
+}
+
+/* figure.gridcell.branding {
+  content: url();
+} */
+
+.swade-official .charname-container input[type] {
+  background: transparent;
+  min-width: 490px;
+}
+
+.swade-official button:hover,
+.swade-official button:focus,
+.swade-official input[type=text]:hover, 
+.swade-official input[type=text] :focus, 
+.swade-official input[type=number]:hover, 
+.swade-official input[type=number] :focus {
+  box-shadow: none !important;
+  text-shadow: 0 0 10px var(--lightblue) !important;
+}
+
+.swade-official input[type="text"]:focus, 
+.swade-official input[type="number"]:focus, 
+.swade-official input[type="password"]:focus, 
+.swade-official input[type="date"]:focus, 
+.swade-official input[type="time"]:focus {
+  box-shadow: none !important;
+  text-shadow: 0 0 10px var(--lightblue) !important;
 }
