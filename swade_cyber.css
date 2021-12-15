@@ -333,6 +333,12 @@ textarea#chat-message {
   padding-bottom: 4px;
 }
 
+.swade-official .parry-display {
+  background-image: url(./ui/sheet_parry.svg);
+  color: var(--lightblue);
+  padding-bottom: 4px;
+}
+
 .swade-official #conviction input, 
 .swade-official .derived input, 
 .swade-official .additional-stats input, 
@@ -370,6 +376,15 @@ section.inventory span.header-name {
 
 .swade-official .skills li {
   border-bottom: 2px solid var(--lightblue);
+}
+
+.swade-official .quickaccess .effects-list li {
+  border-bottom: 2px solid var(--lightblue);
+  color: var(--lightblue);
+}
+
+.swade-official .quickaccess .effects-list li .fa-power-off:before {
+  color: var(--lightblue);
 }
 
 .swade-official .gear-card {
