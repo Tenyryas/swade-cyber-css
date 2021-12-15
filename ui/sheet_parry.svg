@@ -10,7 +10,7 @@
 		.st1 {
 			fill-rule: evenodd;
 			clip-rule: evenodd;
-			fill: #0a1629;
+			fill: #0dabe8;
 		}
 	</style>
 	<path class="st0" d="M32.5,0.5h448c17.7,0,32,14.3,32,32v448c0,17.7-14.3,32-32,32h-448c-17.7,0-32-14.3-32-32v-448
