@@ -9,6 +9,11 @@
   linear-gradient(225deg, transparent 0px, var(--darkgrey) 0) top right,
   linear-gradient(315deg, transparent 9px, var(--darkgrey) 0) bottom right,
   linear-gradient(45deg,  transparent 0px, var(--darkgrey) 0) bottom left;
+  --gradient-light:
+  linear-gradient(135deg, transparent 9px, var(--lightblue) 0) top left,
+  linear-gradient(225deg, transparent 0px, var(--lightblue) 0) top right,
+  linear-gradient(315deg, transparent 9px, var(--lightblue) 0) bottom right,
+  linear-gradient(45deg,  transparent 0px, var(--lightblue) 0) bottom left;
   --lightblue: #0dabe8;
   --darkgrey: #0a1629;
   --white: #e8e8e8;
@@ -340,8 +345,7 @@ textarea#chat-message {
 }
 
 .swade-official #conviction input, 
-.swade-official .derived input, 
-.swade-official .additional-stats input, 
+.swade-official .derived input,  
 .swade-official .currency input {
   background: var(--gradient);
   color: var(--lightblue);
@@ -439,3 +443,16 @@ section.inventory span.header-name {
   box-shadow: none !important;
   text-shadow: 0 0 10px var(--lightblue) !important;
 }
+
+.swade-official .additional-stats {
+  color: var(--lightblue);
+}
+
+.swade-official .additional-stats input {
+  color: var(--darkgrey);
+  background: var(--gradient-light);
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
