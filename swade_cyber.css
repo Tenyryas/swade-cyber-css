@@ -18,8 +18,17 @@
   --darkgrey: #0a1629;
   --white: #e8e8e8;
   --animation: bg-scrolling-reverse 5s linear infinite;
-
 }
+
+@keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+/*********************************
+*
+*        NPC & ITEM SHEET
+*
+*********************************/
 
 .swade.sheet.item .sheet-body .header-field, .swade.sheet.actor.character .inventory .items-list .item-header, .swade.sheet.actor .sheet-body .header-field {
   background: var(--gradient);
@@ -53,6 +62,240 @@
 .swade.sheet input[type=text]{
   background: rgba(0, 0, 0, 0.1);
 }
+
+.swade.sheet.item .sheet-body .editor{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .editor{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .header-field .fa-plus:hover {
+  filter: drop-shadow(0 0 5px #FFFFFF);
+}
+.swade.sheet.actor .sheet-body .biography .header-field {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.swade.sheet.actor .sheet-body .attributes .attributes-list .attribute input {
+  background: rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header .item-image{
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-content {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.swade.sheet.actor .sheet-body .powers input[type=text]{
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  font-weight: bold;
+  border-color: var(--darkgrey);
+}
+.swade.sheet.actor .powers .arcane-tabs .arcane {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+.swade.sheet.actor .powers .arcane-tabs .arcane:hover, .swade.sheet.actor .powers .arcane-tabs .arcane:focus {
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.swade.sheet.actor .powers .arcane-tabs .arcane.active {
+  background: var(--darkgrey);
+  border: 1px solid var(--lightblue);
+}
+.swade.sheet.actor .sheet-body .powers input[type=text]::placeholder{
+  color: rgba(255, 255, 255, 0.75);
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power {
+  border: 1px solid var(--darkgrey);
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header {
+  background: var(--darkgrey);
+  border-bottom: 0px solid var(--lightblue);
+  color: var(--lightblue);
+}
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header .fas:hover {
+  filter: drop-shadow(0 0 5px var(--lightblue));
+  text-shadow: none;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .item-unequipped{
+  text-shadow: none;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls {
+  color: var(--lightblue);
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fas {
+  font-weight: normal;
+}
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fa-star {
+  font-weight: bold;
+}
+.swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-current {
+  background: rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid rgba(179, 175, 155, 1);
+}
+.swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-max {
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.swade.sheet.actor .inventory .inventory-categories .item-titles {
+  background: var(--lightblue);
+  border-radius: 0px;
+}
+.swade.sheet.actor .inventory .inventory-categories .item-image{
+  border-radius: 5px;
+}
+
+.swade.sheet button:hover,
+.swade.sheet button:focus,
+.swade.sheet input[type=text]:hover, 
+.swade.sheet input[type=text] :focus, 
+.swade.sheet input[type=number]:hover, 
+.swade.sheet input[type=number] :focus,
+.swade.sheet input[type="text"]:focus, 
+.swade.sheet input[type="number"]:focus, 
+.swade.sheet input[type="password"]:focus, 
+.swade.sheet input[type="date"]:focus, 
+.swade.sheet input[type="time"]:focus {
+  box-shadow: none !important;
+  text-shadow: 0 0 10px var(--lightblue) !important;
+}
+
+.swade.sheet.actor #conviction input, 
+.swade.sheet.actor .derived input,  
+.swade.sheet.actor .currency input {
+  background: var(--gradient);
+  color: var(--lightblue);
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  border-radius: 0px;
+}
+
+.swade.sheet a:hover {
+  text-shadow: 0 0 8px var(--lightblue);
+}
+
+/*********************************
+*
+*          Scrollbars
+*
+*********************************/
+
+.swade.sheet ::-webkit-scrollbar-thumb {
+  background: var(--darkgrey);
+  border: 1px solid var(--lightblue);
+}
+
+.swade-official ::-webkit-scrollbar-thumb {
+  background: var(--darkgrey);
+  border: 1px solid var(--lightblue);
+}
+
+
+/*********************************
+*
+*             Chat
+*
+*********************************/
+
+#chat-log .chat-message {
+  background: var(--white);
+  background-image: var(--bg-img);
+  animation: var(--animation);
+}
+textarea#chat-message {
+  background: var(--white);
+  background-image: var(--bg-img);
+  animation: var(--animation);
+}
+#chat-log .chat-message.whisper {
+  background: var(--white);
+  background-image: var(--bg-img);
+  animation: var(--animation);
+  border: 3px solid #ffd453;
+}
+
+
+
+/*********************************
+*
+*           Chat cards
+*
+*********************************/
+
+
+.swade.chat-card .card-header {
+  background: var(--darkgrey);
+  margin-left: -7px;
+  border-top: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: none;
+  box-shadow: 0px 15px 10px -15px rgba(0,0,0,1);
+}
+.swade.chat-card .card-header:hover {
+  background: var(--darkgrey);
+  text-shadow: 0 0 7px var(--lightblue);
+}
+
+.swade.chat-card .card-header h3 {
+  flex: 1;
+  margin: 0;
+  line-height: 40px;
+  color: #111;
+  overflow: hidden;
+  height: 36px;
+  word-break: break-all;
+}
+
+.swade.chat-card .card-header img {
+  background-color: var(--white);
+  flex: 0 0 36px;
+  margin-left: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,1);
+}
+.swade.chat-card .card-header a {
+  color: var(--lightblue);
+  vertical-align: text-bottom;
+}
+.swade.chat-card .card-header a:hover {
+  text-shadow: 0 0 7px var(--lightblue);
+}
+
+.swade.chat-card button:hover,
+.swade.chat-card button:focus {
+  box-shadow: 0 0 5px var(--lightblue);
+}
+
+/*********************************
+*
+*           Checkboxes
+*
+*********************************/
+
 .swade.sheet .checkmark, 
 .swade-official .checkmark {
   background-color: var(--darkgrey);
@@ -102,357 +345,213 @@
 }
 
 
-.swade.sheet.item .sheet-body .editor{
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-}
-.swade.sheet.actor .sheet-body .editor{
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 0;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-.swade.sheet.actor .sheet-body .header-field .fa-plus:hover {
-  filter: drop-shadow(0 0 5px #FFFFFF);
-}
-.swade.sheet.actor .sheet-body .biography .header-field {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.swade.sheet.actor .sheet-body .attributes .attributes-list .attribute input {
-  background: rgba(0, 0, 0, 0.1);
-}
-.swade.sheet.actor .sheet-body .gear .gear-list .gear-card {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-}
-.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-}
-.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header .item-image{
-  border-radius: 6px;
-}
-.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-content {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top: 0;
-  border-color: rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-}
-.swade.sheet.actor .sheet-body .powers input[type=text]{
-  background: rgba(0, 0, 0, 0.1);
-  color: white;
-  font-weight: bold;
-  border-color: var(--darkgrey);
-}
-.swade.sheet.actor .powers .arcane-tabs .arcane {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 0, 0.1);
-}
-.swade.sheet.actor .powers .arcane-tabs .arcane:hover, .swade.sheet.actor .powers .arcane-tabs .arcane:focus {
-  background: rgba(0, 0, 0, 0.2);
-  text-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.swade.sheet.actor .powers .arcane-tabs .arcane.active {
-  background: var(--darkgrey);
-  border: 1px solid var(--white);
-}
-.swade.sheet.actor .sheet-body .powers input[type=text]::placeholder{
-  color: rgba(255, 255, 255, 0.75);
-}
-.swade.sheet.actor .sheet-body .powers .powers-list .power {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-.swade.sheet.actor .sheet-body .powers .powers-list .power .item-image {
-  border-top-left-radius: 10px;
-}
-.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header {
-  background: var(--lightblue);
-  border-bottom: 0px solid rgba(0, 0, 0, 0.1);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  color: white;
-}
-.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header .fas:hover {
-  filter: drop-shadow(0 0 5px #FFFFFF);
-  text-shadow: none;
-}
-.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .item-unequipped{
-  text-shadow: none;
-}
-.swade.sheet.actor .powers .powers-list .power .power-header .item-controls {
-  color: white;
-}
-.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fas {
-  font-weight: normal;
-}
-.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fa-star {
-  font-weight: bold;
-}
-.swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-current {
-  background: rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom: 1px solid rgba(179, 175, 155, 1);
-}
-.swade.sheet.actor.character .vitals .bennies .benny-tracker .bennies-max {
-  background: rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-.swade.sheet.actor .inventory .inventory-categories .item-titles {
-  background: var(--lightblue);
-  border-radius: 0px;
-}
-.swade.sheet.actor .inventory .inventory-categories .item-image{
-  border-radius: 5px;
-}
-.swade.sheet ::-webkit-scrollbar-thumb {
-  outline: none;
-  border-radius: 3px;
-  background: #81a8bd;
-  border: 1px solid var(--lightblue);
-}
-#chat-log .chat-message {
-  background: var(--white);
-  background-image: var(--bg-img);
-  animation: var(--animation);
-}
-textarea#chat-message {
-  background: var(--white);
-  background-image: var(--bg-img);
-  animation: var(--animation);
-}
-#chat-log .chat-message.whisper {
-  background: var(--white);
-  background-image: var(--bg-img);
-  animation: var(--animation);
-  border: 3px solid #ffd453;
-}
-.swade.chat-card .card-header {
-  background: var(--darkgrey);
-  margin-left: -5px;
-  border-top: none;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom: none;
-  box-shadow: 0px 15px 10px -15px rgba(0,0,0,1);
-}
-.swade.chat-card .card-header:hover {
-  background: var(--darkgrey);
-  text-shadow: 0 0 7px var(--lightblue);
-}
 
-.swade.chat-card .card-header h3 {
-  flex: 1;
-  margin: 0;
-  line-height: 40px;
-  color: #111;
-  overflow: hidden;
-  height: 36px;
-  word-break: break-all;
-}
+/*********************************
+*
+*      PLAYER CHARACTER SHEET
+*
+*********************************/
 
-.swade.chat-card .card-header img {
-  background-color: var(--white);
-  flex: 0 0 36px;
-  margin-left: 5px;
-  margin-right: 5px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0px 0px 4px rgba(0,0,0,1);
-}
-.swade.chat-card .card-header a {
-  color: var(--lightblue);
-  vertical-align: text-bottom;
-}
-.swade.chat-card .card-header a:hover {
-  text-shadow: 0 0 7px var(--lightblue);
-}
+  .swade-official .window-content {
+    background-image: var(--bg-img);
+    background-color: var(--white);
+    animation: var(--animation);
+  }
 
-.swade.chat-card button:hover,
-.swade.chat-card button:focus {
-  box-shadow: 0 0 5px var(--lightblue);
-}
+  .swade-official .charname-container input[type] {
+    background: transparent;
+    min-width: 490px;
+  }
+
+  .swade-official .wounds {
+    background-image: url(./ui/circle_wounds.webp);
+  }
+
+  .swade-official .fatigue {
+    background-image: url(./ui/circle_fatigue.webp);
+  }
+
+  .swade-official a:hover {
+    text-shadow: 0 0 8px var(--lightblue);
+  }
+
+  .swade-official .header {
+    background: var(--gradient);
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 0;
+  }
+
+  .swade-official .tabs .active {
+    color: var(--lightblue);
+    text-shadow: 0 0 8px var(--white);
+  }
+
+  .swade-official .section-header {
+    color: var(--lightblue);
+    border-radius: 0px;
+    text-shadow: 0 0 8px var(--white);
+  }
+
+  .swade-official .armor-display {
+    background-image: url(./ui/sheet_armor.svg);
+    color: var(--darkgrey);
+    padding-bottom: 4px;
+  }
+
+  .swade-official .parry-display {
+    background-image: url(./ui/sheet_parry.svg);
+    color: var(--darkgrey);
+    padding-bottom: 4px;
+  }
+
+  /*********************************
+  *
+  *              Gear
+  *
+  *********************************/
+
+  .swade-official .section-header .controls,
+  .swade-official .item-create,
+  section.inventory header > span {
+    color: var(--lightblue);
+  }
+
+  .swade-official .item-create:hover, 
+  .swade-official .item-create :focus {
+    color: var(--lightblue);
+  }
+
+  section.inventory span.header-name {
+    padding-left: 12px;
+  }
+
+  /*********************************
+  *
+  *      Quick Access & Skills
+  *
+  *********************************/
+
+  .swade-official .note-box .section-header {
+    color: var(--lightblue);
+    background: none;
+    text-shadow: 0 0 8px var(--lightblue);
+  }
+
+  .swade-official .skills li {
+    border-bottom: 2px solid var(--lightblue);
+  }
+
+  .swade-official .quickaccess .effects-list li {
+    border-bottom: 2px solid var(--lightblue);
+    color: var(--lightblue);
+  }
+
+  .swade-official .quickaccess .effects-list li .fa-power-off:before {
+    color: var(--lightblue);
+  }
+
+  .swade-official .gear-card {
+    border-bottom: 2px solid var(--lightblue);
+  }
+
+  .swade-official .note-box {
+    grid-template-rows: minmax(3.2em, auto) 1fr 12em;
+  }
+
+  .swade-official .note-box button {
+    color: var(--lightblue);
+  }
+
+  .swade-official .note-box .note-header {
+    background-image: var(--skills-header);
+  }
+
+  .swade-official .note-box .note-main {
+    background-image: var(--skills-body);
+  }
+
+  .swade-official .note-box .note-footer {
+    background-image: var(--skills-footer);
+    height: 48px;
+  }
+
+  /*********************************
+  *
+  *            Inputs
+  *
+  *********************************/
+
+  .swade-official button:hover,
+  .swade-official button:focus,
+  .swade-official input[type=text]:hover, 
+  .swade-official input[type=text] :focus, 
+  .swade-official input[type=number]:hover, 
+  .swade-official input[type=number] :focus,
+  .swade-official input[type="text"]:focus, 
+  .swade-official input[type="number"]:focus, 
+  .swade-official input[type="password"]:focus, 
+  .swade-official input[type="date"]:focus, 
+  .swade-official input[type="time"]:focus {
+    box-shadow: none !important;
+    text-shadow: 0 0 10px var(--lightblue) !important;
+  }
+
+  .swade-official #conviction input, 
+  .swade-official .derived input,  
+  .swade-official .currency input,
+  .swade-official .powers .pp-counter input,
+  .swade-official .powers .pp-adjust {
+    background: var(--gradient);
+    color: var(--lightblue);
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    border-radius: 0px;
+  }
+
+  /*********************************
+  *
+  *         Additional stats
+  *
+  *********************************/
+
+  .swade-official .additional-stats {
+    color: var(--lightblue);
+  }
+
+  .swade-official .additional-stats input {
+    color: var(--darkgrey);
+    background: var(--gradient-light);
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    border-radius: 0;
+  }
+
+
+  /*********************************
+  *
+  *             About
+  *
+  *********************************/
+
+  .swade-official .description .char-img-container {
+    background-image: url(./ui/char-bg.webp);
+  }
+
+  .swade-official .description .char-img-container img {
+    max-width: 180px;
+    max-height: 180px;
+  }
 
 
 
-/* 
+  /*********************************
+  *
+  *           Branding
+  *
+  *********************************/
 
-  SWADE OFFICIAL 
-
-*/
-
-.swade-official .window-content {
-  background-image: var(--bg-img);
-  background-color: var(--white);
-  animation: var(--animation);
-}
-
-.swade-official .wounds {
-  background-image: url(./ui/circle_wounds.webp);
-}
-
-.swade-official .fatigue {
-  background-image: url(./ui/circle_fatigue.webp);
-}
-
-@keyframes bg-scrolling-reverse {
-  100% { background-position: 50px 50px; }
-}
-
-.swade-official a:hover {
-  text-shadow: 0 0 8px var(--lightblue);
-}
-
-.swade-official .header {
-  background: var(--gradient);
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  border-radius: 0;
-}
-
-.swade-official .tabs .active {
-  color: var(--lightblue);
-  text-shadow: 0 0 8px var(--white);
-}
-
-.swade-official .section-header {
-  color: var(--lightblue);
-  border-radius: 0px;
-  text-shadow: 0 0 8px var(--white);
-}
-
-.swade-official .note-box .section-header {
-  color: var(--lightblue);
-  background: none;
-  text-shadow: 0 0 8px var(--lightblue);
-}
-
-.swade-official .armor-display {
-  background-image: url(./ui/sheet_armor.svg);
-  color: var(--lightblue);
-  padding-bottom: 4px;
-}
-
-.swade-official .parry-display {
-  background-image: url(./ui/sheet_parry.svg);
-  color: var(--darkgrey);
-  padding-bottom: 4px;
-}
-
-.swade-official #conviction input, 
-.swade-official .derived input,  
-.swade-official .currency input {
-  background: var(--gradient);
-  color: var(--lightblue);
-  background-size: 51% 51%;
-  background-repeat: no-repeat;
-  border-radius: 0px;
-}
-
-.swade-official .section-header .controls,
-.swade-official .item-create,
-section.inventory header > span {
-  color: var(--lightblue);
-}
-
-.swade-official .item-create:hover, 
-.swade-official .item-create :focus {
-  color: var(--lightblue);
-}
-
-section.inventory span.header-name {
-  padding-left: 12px;
-}
-
-.swade-official .description .char-img-container {
-  background-image: url(./ui/char-bg.webp);
-}
-
-.swade-official .description .char-img-container img {
-  max-width: 180px;
-  max-height: 180px;
-}
-
-.swade-official .skills li {
-  border-bottom: 2px solid var(--lightblue);
-}
-
-.swade-official .quickaccess .effects-list li {
-  border-bottom: 2px solid var(--lightblue);
-  color: var(--lightblue);
-}
-
-.swade-official .quickaccess .effects-list li .fa-power-off:before {
-  color: var(--lightblue);
-}
-
-.swade-official .gear-card {
-  border-bottom: 2px solid var(--lightblue);
-}
-
-.swade-official .note-box {
-  grid-template-rows: minmax(3.2em, auto) 1fr 12em;
-}
-
-.swade-official .note-box button {
-  color: var(--lightblue);
-}
-
-.swade-official .note-box .note-header {
-  background-image: var(--skills-header);
-}
-
-.swade-official .note-box .note-main {
-  background-image: var(--skills-body);
-}
-
-.swade-official .note-box .note-footer {
-  background-image: var(--skills-footer);
-  height: 48px;
-}
-
-/* figure.gridcell.branding {
-  content: url();
-} */
-
-.swade-official .charname-container input[type] {
-  background: transparent;
-  min-width: 490px;
-}
-
-.swade-official button:hover,
-.swade-official button:focus,
-.swade-official input[type=text]:hover, 
-.swade-official input[type=text] :focus, 
-.swade-official input[type=number]:hover, 
-.swade-official input[type=number] :focus {
-  box-shadow: none !important;
-  text-shadow: 0 0 10px var(--lightblue) !important;
-}
-
-.swade-official input[type="text"]:focus, 
-.swade-official input[type="number"]:focus, 
-.swade-official input[type="password"]:focus, 
-.swade-official input[type="date"]:focus, 
-.swade-official input[type="time"]:focus {
-  box-shadow: none !important;
-  text-shadow: 0 0 10px var(--lightblue) !important;
-}
-
-.swade-official .additional-stats {
-  color: var(--lightblue);
-}
-
-.swade-official .additional-stats input {
-  color: var(--darkgrey);
-  background: var(--gradient-light);
-  background-size: 51% 51%;
-  background-repeat: no-repeat;
-  border-radius: 0;
-}
+  /* figure.gridcell.branding {
+    content: url();
+  } */
 
