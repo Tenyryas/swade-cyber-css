@@ -44,6 +44,7 @@
 .swade.sheet .tabs {
   border-color: var(--lightblue) !important;
 }
+
 .swade.sheet .tabs .item {
   background: var(--gradient) !important;
   color : var(--lightblue);
@@ -375,7 +376,8 @@ textarea#chat-message {
     text-shadow: 0 0 8px var(--lightblue);
   }
 
-  .swade-official .header {
+  .swade-official .header,
+  .swade-official .effects.active .effect-header {
     background: var(--gradient);
     background-size: 50% 50%;
     background-repeat: no-repeat;
@@ -386,6 +388,19 @@ textarea#chat-message {
     color: var(--lightblue);
     text-shadow: 0 0 8px var(--white);
   }
+
+  .swade-official .sub-tabs .item {
+    color: black;
+}
+
+.swade-official .sub-tabs .item.active {
+    color: var(--lightblue);
+    text-shadow: none;
+}
+
+.swade-official .sub-tabs .item:hover {
+    text-shadow: 0 0 8px var(--lightblue);
+}
 
   .swade-official .section-header {
     color: var(--lightblue);
@@ -405,6 +420,8 @@ textarea#chat-message {
     padding-bottom: 4px;
   }
 
+  
+
   /*********************************
   *
   *              Gear
@@ -413,7 +430,8 @@ textarea#chat-message {
 
   .swade-official .section-header .controls,
   .swade-official .item-create,
-  section.inventory header > span {
+  section.inventory header > span,
+  .swade-official .effects.active .effect-header > span {
     color: var(--lightblue);
   }
 
@@ -453,6 +471,7 @@ textarea#chat-message {
 
   .swade-official .gear-card {
     border-bottom: 2px solid var(--lightblue);
+    color: var(--lightblue);
   }
 
   .swade-official .note-box {
@@ -469,12 +488,22 @@ textarea#chat-message {
 
   .swade-official .note-box .note-main {
     background-image: var(--skills-body);
+    background-size: 100% 100%;
   }
 
   .swade-official .note-box .note-footer {
     background-image: var(--skills-footer);
     height: 48px;
   }
+
+  .swade-official .skills .skill-die {
+    border-bottom-color: var(--lightblue);
+  }
+
+
+  .swade-official .skills .skill-die .skill-die-icon {
+    filter: invert(61%) sepia(52%) saturate(6130%) hue-rotate(166deg) brightness(104%) contrast(90%);
+}
 
   /*********************************
   *
@@ -508,6 +537,19 @@ textarea#chat-message {
     background-repeat: no-repeat;
     border-radius: 0px;
   }
+
+  .swade-official .character-detail input[name="data.advances.rank"]:disabled,
+.swade-official .character-detail input[name="data.advances.value"]:disabled {
+    color: black;
+    font-weight: normal;
+    background-color: transparent;
+}
+
+.swade-official input[type=number]:disabled, .swade-official input[type=text]:disabled {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    font-weight: bold;
+}
 
   /*********************************
   *
