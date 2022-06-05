@@ -456,16 +456,19 @@ textarea#chat-message {
     text-shadow: 0 0 8px var(--lightblue);
   }
 
-  .swade-official .skills li {
-    border-bottom: 2px solid var(--lightblue);
-  }
-
-  .swade-official .quickaccess .effects-list li {
+  .swade-official .skills li,
+  .swade-official .quickaccess .effects-list li  {
     border-bottom: 2px solid var(--lightblue);
     color: var(--lightblue);
   }
 
-  .swade-official .quickaccess .effects-list li .fa-power-off:before {
+  .swade-official .skills li a,
+  .swade-official .quickaccess li a {
+    color: var(--white);
+  }
+
+  .swade-official .quickaccess .effects-list li .fa-power-off:before,
+  .swade-official .note-box button {
     color: var(--lightblue);
   }
 
@@ -476,10 +479,6 @@ textarea#chat-message {
 
   .swade-official .note-box {
     grid-template-rows: minmax(3.2em, auto) 1fr 12em;
-  }
-
-  .swade-official .note-box button {
-    color: var(--lightblue);
   }
 
   .swade-official .note-box .note-header {
