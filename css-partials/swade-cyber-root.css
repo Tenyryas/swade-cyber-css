@@ -1,0 +1,53 @@
+:root {
+
+    --lightblue: #0dabe8;
+    --darkgrey: #0a1629;
+    --white: #e8e8e8;
+
+    --bg-img: url("../ui/PBR_2.png");
+    --skills-header: url(../ui/skills_header.webp);
+    --skills-body: url(../ui/skills_bg.webp);
+    --skills-footer: url(../ui/skills_footer.webp);
+    --gradient:
+        linear-gradient(135deg, transparent 9px, var(--darkgrey) 0) top left,
+        linear-gradient(225deg, transparent 0px, var(--darkgrey) 0) top right,
+        linear-gradient(315deg, transparent 9px, var(--darkgrey) 0) bottom right,
+        linear-gradient(45deg, transparent 0px, var(--darkgrey) 0) bottom left;
+    --gradient-light:
+        linear-gradient(135deg, transparent 9px, var(--lightblue) 0) top left,
+        linear-gradient(225deg, transparent 0px, var(--lightblue) 0) top right,
+        linear-gradient(315deg, transparent 9px, var(--lightblue) 0) bottom right,
+        linear-gradient(45deg, transparent 0px, var(--lightblue) 0) bottom left;
+    --animation: bg-scrolling-reverse 5s linear infinite;
+
+    --contrast-colour: var(--lightblue); /* Hovered Checkbox, Heading text, active tab text, Chat Card heading bg, high contrast text */
+
+    --shadows-colour: var(--lightblue);
+    --contrast-colour-box-shadow: 0 0 5px var(--shadows-colour);
+    --contrast-colour-text-shadow: 0 0 8px var(--shadows-colour);
+
+    --scroll-bar-inner: var(--darkgrey); /* The inner part of the scroll bar, hovered chat card heading bg */
+    --scroll-bar-border: var(--lightblue);
+
+    --text-main-colour: var(--darkgrey);
+    --text-headers-colour: var(--lightblue);
+    --text-headers-active-colour: var(--darkgrey);
+
+    --input-text-color: #ffffffff;
+    --input-bg-color: var(--lightblue);
+    --input-disabled-text-color: var(--darkgrey);
+
+    --box-colour: var(--darkgrey);
+    /* Inactive checkbox, bg of size/conviction/additional stat boxes*/
+    --checkbox-rim-colour: #dee8edff;
+    /* Only for the rim on hovered checkboxes */
+
+    --black-point-one: rgba(0, 0, 0, 0.1);
+    --black-point-two: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}

@@ -1,0 +1,175 @@
+@import url('swade-hf-root.css');
+
+/*********************************
+*
+*        NPC SHEET
+*
+*********************************/
+
+.swade.sheet .window-content {
+    background-image: var(--bg-img);
+    background-color: var(--white);
+    animation: var(--animation);
+}
+
+.swade.sheet a:hover {
+    text-shadow: var(--contrast-colour-text-shadow);
+}
+
+.swade.sheet.item .sheet-body .header-field,
+.swade.sheet.actor.character .inventory .items-list .item-header,
+.swade.sheet.actor .sheet-body .header-field,
+.swade.sheet.actor .inventory .inventory-categories .item-titles {
+    background: var(--box-colour);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--text-headers-colour);
+}
+
+.swade.sheet .tabs .item {
+    background: var(--box-colour) !important;
+    color: var(--text-headers-colour);
+    border-color: var(--box-colour) !important;
+}
+
+.swade.sheet .tabs .item:hover,
+.swade.sheet .tabs .item:focus {
+    background: var(--contrast-colour) !important;
+    border-color: var(--box-colour) !important;
+}
+
+.swade.sheet .tabs .item.active {
+    background: var(--contrast-colour) !important;
+    color: var(--text-headers-active-colour);
+    border-color: var(--box-colour) !important;
+}
+
+.swade.sheet input[type=text] {
+    background: var(--black-point-one);
+}
+
+.swade.sheet.actor .sheet-body .attributes .attributes-list .attribute input {
+    background: var(--black-point-one);
+}
+
+.swade.sheet button:hover,
+.swade.sheet button:focus,
+.swade.sheet input[type]:hover, 
+.swade.sheet input[type]:focus {
+  box-shadow: none !important;
+  text-shadow: var(--shadows-colour) !important;
+}
+
+/*********************************
+*
+*        NPC Editors
+*
+*********************************/
+
+.swade.sheet.item .sheet-body .editor {
+    border: 1px solid var(--black-point-two);
+    border-radius: 6px;
+}
+
+.swade.sheet.actor .sheet-body .editor {
+    border: 1px solid var(--black-point-two);
+    border-top: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.swade.sheet.actor .sheet-body .header-field .fa-plus:hover {
+    filter: drop-shadow(0 0 5px #FFFFFF);
+}
+
+.swade.sheet.actor .sheet-body .biography .header-field {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*********************************
+*
+*          NPC gear
+*
+*********************************/
+
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--black-point-two);
+}
+
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-header {
+    background: none;
+    border-radius: 6px;
+}
+
+.swade.sheet.actor .sheet-body .gear .gear-list .gear-card .card-content {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+    border-color: transparent;
+    border-radius: 6px;
+}
+
+/*********************************
+*
+*          NPC powers
+*
+*********************************/
+.swade.sheet.actor .sheet-body .powers input[type=text] {
+    background: var(--black-point-one);
+    color: var(--text-headers-colour);
+    font-weight: bold;
+    border-color: var(--box-colour);
+}
+
+.swade.sheet.actor .powers .arcane-tabs .arcane {
+    border: 1px solid var(--black-point-two);
+    background: var(--black-point-one);
+}
+
+.swade.sheet.actor .powers .arcane-tabs .arcane:hover,
+.swade.sheet.actor .powers .arcane-tabs .arcane:focus {
+    background: var(--black-point-two);
+    text-shadow: none;
+    border: 1px solid var(--black-point-two);
+}
+
+.swade.sheet.actor .powers .arcane-tabs .arcane.active {
+    background: var(--box-colour);
+    border: 1px solid var(--text-headers-colour);
+}
+
+.swade.sheet.actor .sheet-body .powers input[type=text]::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.swade.sheet.actor .sheet-body .powers .powers-list .power {
+    border: 1px solid var(--black-point-one);
+    border-radius: 10px;
+}
+
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header {
+    background: var(--box-colour);
+    border-bottom: 0px solid var(--black-point-one);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: var(--text-headers-colour);
+}
+
+.swade.sheet.actor .sheet-body .powers .powers-list .power .power-header .fas:hover {
+    filter: drop-shadow(0 0 5px var(--text-headers-colour));
+    text-shadow: none;
+}
+
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .item-unequipped {
+    text-shadow: none;
+}
+
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls {
+    color: var(--text-headers-colour);
+}
+
+.swade.sheet.actor .powers .powers-list .power .power-header .item-controls .fas {
+    font-weight: normal;
+}
