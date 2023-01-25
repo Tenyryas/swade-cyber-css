@@ -5,6 +5,44 @@
     border-bottom: 1px solid var(--box-colour);
 }
 
+div.window-app section.window-content {
+    background-image: var(--bg-img);
+    background-color: var(--white);
+    animation: var(--animation);
+    color: var(--text-main-colour);
+}
+
+div.window-app section.window-content h2.border {
+    border-bottom: 1px solid var(--box-colour);
+}
+
+div.window-app section.window-content .tabs .item.active,
+div.window-app section.window-content a:hover {
+    text-shadow: 0 0 10px var(--contrast-colour);
+}
+
+div.window-app section.window-content input:focus,
+div.window-app section.window-content textarea:focus,
+div.window-app section.window-content button:hover,
+div.window-app section.window-content button:focus,
+div.window-app section.window-content select:focus {
+    box-shadow: 0 0 5px var(--contrast-colour);
+}
+
+div.window-app section.window-content input[type=checkbox] {
+    accent-color: var(--box-colour);
+}
+
+.compendium-toc .toc h1.header {
+    color: var(--text-headers-colour);
+    border-bottom: 2px solid var(--box-colour);
+}
+
+.compendium-toc .toc .toc-entry .name {
+    text-decoration-color: var(--box-colour);
+}
+
+
 /*********************************
 *
 *        CHECKMARKS
