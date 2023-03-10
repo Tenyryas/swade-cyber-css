@@ -12,6 +12,12 @@ div.window-app section.window-content {
     color: var(--text-main-colour);
 }
 
+.sheet.journal-entry .journal-entry-content {
+    background-image: var(--bg-img);
+    background-color: var(--white);
+    animation: var(--animation);
+}
+
 div.window-app section.window-content h2.border {
     border-bottom: 1px solid var(--box-colour);
 }
