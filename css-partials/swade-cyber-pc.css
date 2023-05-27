@@ -195,12 +195,20 @@
     color: var(--lightblue);
 }
 
-.swade-official .additional-stats input {
+.swade-official .additional-stats input,
+.swade-official .additional-stats select {
     color: var(--darkgrey);
     background: var(--gradient-light);
-    background-size: 51% 51%;
+    background-size: 52% 52%;
     background-repeat: no-repeat;
     border-radius: 0;
+    text-align: center;
+    border-bottom: none;
+}
+
+.swade-official .additional-stats .checkmark,
+.swade-official .additional-stats input:checked~.checkmark {
+    background-color: var(--lightblue);
 }
 
 .swade-official button:hover,
