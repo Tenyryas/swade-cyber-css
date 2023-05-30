@@ -3,7 +3,10 @@
     --lightblue: #0dabe8;
     --darkgrey: #0a1629;
     --white: #e8e8e8;
-
+    
+    --journal-bg-img: var(--bg-img);
+    --journal-bg: var(--white);
+    --journal-animation: var(--animation);
     --bg-img: url("../ui/PBR_2.png");
     --skills-header: url(../ui/skills_header.webp);
     --skills-body: url(../ui/skills_bg.webp);

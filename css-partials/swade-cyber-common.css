@@ -12,10 +12,12 @@ div.window-app section.window-content {
     color: var(--text-main-colour);
 }
 
-.sheet.journal-entry .journal-entry-content {
-    background-image: var(--bg-img);
-    background-color: var(--white);
-    animation: var(--animation);
+.sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-content {
+    background-image: var(--journal-bg-img);
+    background-color: var(--journal-bg);
+    background-repeat: repeat;
+    animation: var(--journal-animation);
+    background-size: unset;
 }
 
 div.window-app section.window-content h2.border {
