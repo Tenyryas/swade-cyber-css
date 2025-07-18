@@ -18,6 +18,20 @@ div.window-app section.window-content {
     background-repeat: repeat;
     animation: var(--journal-animation);
     background-size: unset;
+    color: var(--darkgrey);
+}
+
+.sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h1, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h2, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h3, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h4, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h5, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h6, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page p, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page blockquote {
+    color: var(--darkgrey);
+}
+
+.sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h1, .sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page h2 {
+    border-bottom: 1px solid var(--lightblue);
+}
+
+.sheet.journal-entry:not(.swade-core-wrapper) .journal-entry-page hr {
+    color: var(--lightblue);
+    background-image: linear-gradient(90deg, transparent 0%, var(--lightblue) 50%, transparent 100%);
 }
 
 div.window-app section.window-content h2.border {
